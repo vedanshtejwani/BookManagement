@@ -8,7 +8,7 @@ const app = express();
 app.use(express.json());
 //Cors will  be used as a middleware
 //OPTION1:This will allow all the requests
-app.use(cors())
+app.use(cors());
 
 //OPTION2:THIS will allow only custom values
 //app.use(cors({origin:[],methods:[],allowedHeaders:[]}))
@@ -17,7 +17,7 @@ app.get("/", (req, res) => {
   console.log(res);
   return res.status(203).send("Welcome to the Book store"); //204 nhi use karna
 });
-app.use("/books", bookRoutes);
+app.use("/api/books", bookRoutes);
 //Use to connect the database
 
 mongoose
@@ -31,3 +31,4 @@ mongoose
   .catch((err) => {
     console.log("failed", err.message);
   });
+module.exports = app;

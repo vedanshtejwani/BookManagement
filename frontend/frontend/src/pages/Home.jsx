@@ -13,7 +13,7 @@ function Home() {
   useEffect(() => {
     setLoading(true);
     axios
-      .get("http://localhost:3000/books")
+      .get("/api/books")
       .then((response) => {
         // Depending on your backend, data might be in response.data or response.data.data
         setBooks(response.data.data);

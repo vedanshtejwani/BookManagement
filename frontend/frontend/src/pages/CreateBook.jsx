@@ -16,7 +16,7 @@ const CreateBook = () => {
     const data = { title, author, publishYear };
     setLoading(true);
     axios
-      .post("http://localhost:3000/books", data) // Double check if your port is 3000 or 5555
+      .post("/api/books", data) // Double check if your port is 3000 or 5555
       .then(() => {
         setLoading(false);
         navigate("/");

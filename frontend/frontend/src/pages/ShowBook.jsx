@@ -12,7 +12,7 @@ const ShowBook = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`http://localhost:3000/books/${id}`)
+      .get(`/api/books/${id}`)
       .then((response) => {
         // Handle both common response structures
         setBook(response.data.data || response.data);
