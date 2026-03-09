@@ -1,7 +1,7 @@
 import express from "express";
 import { Book } from "../models/backmodels.js";
 const router = express.Router();
-
+app.use("/api/books", bookRoutes);
 //Route for save a new book
 router.post("/", async (req, res) => {
   try {
