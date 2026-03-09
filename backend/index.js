@@ -24,9 +24,9 @@ mongoose
   .connect(mongodbURL)
   .then(() => {
     console.log("databse connected successfully");
-    app.listen(PORT, () =>
-      console.log(`Example app listening on port ${PORT}!`),
-    );
+    // app.listen(PORT, () =>
+    //   console.log(`Example app listening on port ${PORT}!`),
+    // );
   })
   .catch((err) => {
     console.log("failed", err.message);
